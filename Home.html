@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FusionHub Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('https://miniqwiz.com/wp-content/uploads/2023/06/Modern-Movies.jpg');
+            position: relative;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: rgba(0,0,0,0.68);
+            pointer-events: none;
+        }
+        .app-navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #000000;
+            padding: 16px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            z-index: 5; /* Added z-index */
+            position: relative; /* Needed for z-index to take effect */
+        }
+        .app-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .app-nav {
+            display: flex;
+            gap: 24px;
+        }
+        .app-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .app-nav a:hover {
+            color: #ff2222;
+            background: #1a1a1a;
+        }
+        .app-search {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .app-search input {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: none;
+            background: #222;
+            color: #fff;
+            outline: none;
+        }
+        .app-search button {
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        /* --- Hero Section Styles --- */
+        .app-hero {
+            background: url('https://img.freepik.com/free-vector/theater-cinema-curtains-with-focus-light-vector-illustration_1017-38346.jpg') center center/120% no-repeat;
+            filter: none;
+            position: relative;
+            padding: 40px 10px 40px 10px;
+            border-radius: 0 0 18px 18px;
+            margin-bottom: 24px;
+            box-shadow: 0 3px 16px rgba(0, 0, 0, 0.600);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .app-hero::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #fff3 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .app-hero-title,
+        .app-hero-desc {
+            position: relative;
+            z-index: 1;
+        }
+        .app-hero-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #fff;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #352b2bbe, 0 1px 4px rgba(5, 5, 5, 0.63);
+            z-index: 1;
+        }
+        .app-hero-desc {
+            font-size: 0.92rem;
+            color: #ffffff;
+            max-width: 320px;
+            z-index: 1;
+            line-height: 1.4;
+        }
+        /* --- App Grid Styles --- */
+        .app-section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 24px 0 12px 20px;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 80px));
+            gap: 10px !important;
+            padding: 12px 10px 18px 30px;
+        }
+        .app-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            background: #fff;
+            box-shadow: 0 1px 5px rgb(0, 0, 0);
+            transition: box-shadow 0.18s, transform 0.18s;
+        }
+        .app-card img:hover {
+            box-shadow: 0 4px 16px #ff0000a0, 0 1px 8px #0008;
+            transform: scale(1.06);
+        }
+        .app-card-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 2px;
+            letter-spacing: 0.3px;
+            text-shadow: 0 1px 4px #0003;
+            padding: 0 2px;
+        }
+        /* --- Responsive Styles --- */
+        @media (max-width: 600px) {
+            .app-hero {
+                padding: 14px 4px 8px 4px;
+                border-radius: 0 0 10px 10px;
+                background-position: center 90%;
+                background-size: 180%;
+            }
+            .app-hero-title {
+                font-size: 1rem;
+                margin-bottom: 4px;
+            }
+            .app-hero-desc {
+                font-size: 0.78rem;
+            }
+            .app-grid {
+                grid-template-columns: repeat(auto-fit, minmax(70px, 50px));
+                gap: 2px;
+                padding: 0 2px 8px 2px;
+            }
+            .app-card {
+                padding: 6px 2px 4px 2px;
+                min-height: 48px;
+                margin: 0 1px;
+            }
+            .app-card img {
+                width: 22px;
+                height: 22px;
+                margin-bottom: 3px;
+            }
+            .app-card-title {
+                font-size: 0.68rem;
+            }
+            .app-navbar, .app-hero, .app-section-title, .app-grid {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .app-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+        }
+        /* --- Navbar Styles (Legacy/Extra) --- */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 68px;
+            background-color: #000;
+            box-shadow: 12px 12px 12px rgb(0, 0, 0);
+        }
+        .navbar .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff2222;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #000a;
+        }
+        .navbar nav ul {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .navbar nav ul li a:hover {
+            color: #ff2222;
+            background: #1a1a1a;
+        }
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar input[type="text"] {
+            padding: 7px 12px;
+            border-radius: 4px;
+            border: 1.5px solid #222;
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .navbar input[type="text"]:focus {
+            border-color: #ff2222;
+        }
+        .navbar button {
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 14px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .navbar button:hover {
+            background: #b0060f;
+        }
+        /* --- Movie Grid Styles --- */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 130px));
+            gap: 20px;
+            padding: 10px 20px 20px 30px;
+            justify-items: center;
+        }
+        .movie-card img {
+            border-color: #000000;
+            width: 160px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            transition: box-shadow 0.18s, transform 0.18s;
+        }
+        .movie-card img:hover {
+            box-shadow: 0 6px 24px rgba(255, 0, 0, 0.25), 0 2px 10px rgba(0,0,0,0.18);
+            transform: scale(1.04);
+        }
+        .movie-card-title {
+            font-size: 1.08rem;
+            font-weight: 600;
+            text-align: center;
+            color: #ffe7e7;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 6px #0004;
+            padding: 0 4px;
+        }
+        @media (max-width: 600px) {
+            .movie-card {
+                width: 100px;
+                min-height: 170px;
+                padding: 10px 4px 8px 4px;
+            }
+            .movie-card img {
+                width: 90px;
+                height: 130px;
+            }
+            .movie-card-title {
+                font-size: 0.92rem;
+            }
+            .movie-grid {
+                gap: 0px;
+            }
+        }
+        .movie-footer {
+            margin-top: 155px;
+            text-align: center;
+            padding: 18px 0;
+            background: #131313;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 130px));
+            gap: 20px;
+            padding: 10px 20px 20px 30px;
+            justify-items: center;
+        }
+        .movie-card img {
+            border-color: #000000;
+            width: 160px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            transition: box-shadow 0.18s, transform 0.18s;
+        }
+        .movie-card img:hover {
+            box-shadow: 0 6px 24px rgba(255, 0, 0, 0.25), 0 2px 10px rgba(0,0,0,0.18);
+            transform: scale(1.04);
+        }
+
+        .movie-card-title {
+            font-size: 1.08rem;
+            font-weight: 600;
+            text-align: center;
+            color: #ffe7e7;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 6px #0004;
+            padding: 0 4px;
+        }
+
+        @media (max-width: 600px) {
+            .movie-card {
+            width: 100px;
+            min-height: 170px;
+            padding: 10px 4px 8px 4px;
+            }
+            .movie-card img {
+            width: 90px;
+            height: 130px;
+            }
+            .movie-card-title {
+            font-size: 0.92rem;
+            }
+            .movie-grid {
+            gap: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="app-logo">FusionHub</div>
+            <nav class="app-nav">
+                <a href="Home.html" class="active">Home</a>
+                <a href="Movies - Red/Home.html">MovieHub</a>
+            </nav>
+            <div class="app-search">
+                <input type="text" id="searchInput" placeholder="Search apps...">
+                <button onclick="searchApps()">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="app-hero">
+        <div class="app-hero-title">Discover Top Entertainment Apps</div>
+        <div class="app-hero-desc">Browse trending streaming, utility, and entertainment apps. Find your next favorite tool or platform!</div>
+    </div>
+
+    <main>
+        <!-- App Grid Section -->
+        <div class="app-section-title">Top Apps For You</div>
+        <div class="app-grid" id="appGrid">
+            <!-- Add App Card (always first) -->
+            <div class="app-card" id="addAppCard" style="display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;">
+                <div style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#222;border-radius:8px;box-shadow:0 1px 5px #000;">
+                    <span style="font-size:2.5rem;color:#ff0000;">+</span>
+                </div>
+            </div>
+            <!-- App Cards -->
+            <div class="app-card">
+                <a href="https://www.netflix.com/" target="_blank" rel="noopener">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.disneyplus.com/" target="_blank" rel="noopener">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+ App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.max.com/" target="_blank" rel="noopener">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.primevideo.com/" target="_blank" rel="noopener">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.hulu.com/" target="_blank" rel="noopener">
+                    <img src="https://img.icons8.com/?size=48&id=P0emGsIvzXct&format=png" alt="Hulu App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.spotify.com/" target="_blank" rel="noopener">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">
+                    <img src="https://img.icons8.com/?size=48&id=zoSCFf_pSWUE&format=png" alt="Crunchyroll App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://tv.apple.com/" target="_blank" rel="noopener">
+                    <img src="https://img.icons8.com/?size=50&id=10861&format=png" alt="Apple TV+ App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://play.google.com/store/movies" target="_blank" rel="noopener">
+                    <img src="https://img.icons8.com/?size=48&id=ORTeHm645Suq&format=png" alt="Google Play Movies">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://tubitv.com/" target="_blank" rel="noopener">
+                    <img src="https://img.icons8.com/?size=48&id=Pvg3FhY5iyUL&format=png" alt="Tubi App">
+                </a>
+            </div>
+            <div class="app-card">
+                <a href="https://www.plex.tv/" target="_blank" rel="noopener">
+                    <img src="https://img.icons8.com/?size=48&id=bUiJaENo3bOZ&format=png" alt="Plex App">
+                </a>
+            </div>
+        </div>
+
+        <!-- Add App Modal -->
+        <div id="addAppModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); z-index:2000; align-items:center; justify-content:center;">
+            <form id="addAppForm" style="background:#181818; color:#fff; border-radius:12px; padding:28px 24px 18px 24px; min-width:320px; max-width:90vw; box-shadow:0 4px 24px #000a; display:flex; flex-direction:column; gap:16px; position:relative;">
+                <button type="button" id="closeAddModal" style="position:absolute; top:10px; right:14px; background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer;">&times;</button>
+                <h2 style="margin:0 0 10px 0; font-size:1.2rem;">Add New App</h2>
+                <label>
+                    App Name:
+                    <input type="text" id="addAppName" style="width:100%; padding:7px; border-radius:6px; border:none; background:#232323; color:#fff; margin-top:4px;" required>
+                </label>
+                <label>
+                    App Image URL:
+                    <input type="url" id="addAppImg" style="width:100%; padding:7px; border-radius:6px; border:none; background:#232323; color:#fff; margin-top:4px;" required>
+                </label>
+                <label>
+                    App Link:
+                    <input type="url" id="addAppLink" style="width:100%; padding:7px; border-radius:6px; border:none; background:#232323; color:#fff; margin-top:4px;" required>
+                </label>
+                <button type="submit" style="background:#ff0000; color:#fff; border:none; border-radius:6px; padding:10px 0; font-weight:600; font-size:1rem; cursor:pointer;">Save</button>
+            </form>
+        </div>
+
+        <!-- Context Menu for Editing App Card -->
+        <div id="editContextMenu" style="display:none; position:absolute; z-index:1000; background:#232323; color:#fff; border-radius:8px; box-shadow:0 2px 8px #000a; padding:8px 16px; font-size:1rem; cursor:pointer;">
+            Edit App Card
+        </div>
+
+        <!-- Edit App Card Form Modal -->
+        <div id="editAppModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); z-index:2000; align-items:center; justify-content:center;">
+            <form id="editAppForm" style="background:#181818; color:#fff; border-radius:12px; padding:28px 24px 18px 24px; min-width:320px; max-width:90vw; box-shadow:0 4px 24px #000a; display:flex; flex-direction:column; gap:16px; position:relative;">
+                <button type="button" id="closeEditModal" style="position:absolute; top:10px; right:14px; background:none; border:none; color:#fff; font-size:1.3rem; cursor:pointer;">&times;</button>
+                <h2 style="margin:0 0 10px 0; font-size:1.2rem;">Edit App Card</h2>
+                <label>
+                    App Name:
+                    <input type="text" id="editAppName" style="width:100%; padding:7px; border-radius:6px; border:none; background:#232323; color:#fff; margin-top:4px;" required>
+                </label>
+                <label>
+                    App Image URL:
+                    <input type="url" id="editAppImg" style="width:100%; padding:7px; border-radius:6px; border:none; background:#232323; color:#fff; margin-top:4px;" required>
+                </label>
+                <label>
+                    App Link:
+                    <input type="url" id="editAppLink" style="width:100%; padding:7px; border-radius:6px; border:none; background:#232323; color:#fff; margin-top:4px;" required>
+                </label>
+                <button type="submit" style="background:#ff0000; color:#fff; border:none; border-radius:6px; padding:10px 0; font-weight:600; font-size:1rem; cursor:pointer;">Save Changes</button>
+            </form>
+        </div>
+    </main>
+    <div class="app-section-title">Latest Movies</div>
+    <div class="movie-grid">
+        <div class="movie-card">
+            <img src="https://www.movieposters.com/cdn/shop/files/scan_2d710c1d-40df-446d-9f2b-c685a95089e0_480x.progressive.jpg?v=1737408841" alt="Dune: Part Two">
+        </div>
+        <div class="movie-card">
+            <img src="https://www.movieposters.com/cdn/shop/files/godzillavkong_480x.progressive.jpg?v=1704381861" alt="Godzilla x Kong: The New Empire">
+        </div>
+        <div class="movie-card">
+            <img src="https://www.movieposters.com/cdn/shop/files/inside_out_two_ver2_480x.progressive.jpg?v=1711998871" alt="Inside Out 2">
+        </div>
+        <div class="movie-card">
+            <img src="https://www.movieposters.com/cdn/shop/files/deadpool-wolverine_866a70e7-fb48-4f35-a44b-41594691ac76_480x.progressive.jpg?v=1724680738" alt="Deadpool & Wolverine">
+        </div>
+        <div class="movie-card">
+            <img src="https://www.movieposters.com/cdn/shop/files/kingdom-of-the-planet-of-the-apes_izhauws1_480x.progressive.jpg?v=1703090983" alt="Kingdom of the Planet of the Apes">
+        </div>
+        <div class="movie-card">
+            <img src="https://www.movieposters.com/cdn/shop/files/scan_125c3acc-726c-425f-9512-9f13289d81a6_480x.progressive.jpg?v=1719593307" alt="Furiosa: A Mad Max Saga">
+        </div>
+    </div>
+    <footer class="movie-footer">
+        <p>📱 FusionHub &copy; 2025 &mdash; Explore the best apps!</p>
+    </footer>
+    <script>
+        function searchApps() {
+            // Simple search filter for demonstration
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.app-card');
+            cards.forEach(card => {
+                const title = card.querySelector('.app-card-title').textContent.toLowerCase();
+                card.style.display = title.includes(input) ? '' : 'none';
+            });
+        }
+        // Context menu logic for app cards
+            const appGrid2 = document.getElementById('appGrid');
+            const contextMenu = document.getElementById('editContextMenu');
+            let currentCard = null;
+
+            appGrid2.addEventListener('contextmenu', function(e) {
+            const card = e.target.closest('.app-card');
+            if (card) {
+                e.preventDefault();
+                currentCard = card;
+                contextMenu.style.display = 'block';
+                contextMenu.style.left = e.pageX + 'px';
+                contextMenu.style.top = e.pageY + 'px';
+            } else {
+                contextMenu.style.display = 'none';
+            }
+            });
+
+            document.addEventListener('click', function() {
+            contextMenu.style.display = 'none';
+            });
+
+            // Edit App Card Modal logic
+            const editModal = document.getElementById('editAppModal');
+            const editForm = document.getElementById('editAppForm');
+            const closeEditModal = document.getElementById('closeEditModal');
+            const editAppName = document.getElementById('editAppName');
+            const editAppImg = document.getElementById('editAppImg');
+            const editAppLink = document.getElementById('editAppLink');
+
+            contextMenu.addEventListener('click', function() {
+            contextMenu.style.display = 'none';
+            if (currentCard) {
+                // Get current values
+                const link = currentCard.querySelector('a');
+                const img = currentCard.querySelector('img');
+                editAppName.value = img.alt.replace(/ App$/,'');
+                editAppImg.value = img.src;
+                editAppLink.value = link.href;
+                editModal.style.display = 'flex';
+            }
+            });
+
+            closeEditModal.addEventListener('click', function() {
+            editModal.style.display = 'none';
+            });
+
+            const exitEditModal = document.getElementById('exitEditModal');
+            exitEditModal.addEventListener('click', function() {
+            editModal.style.display = 'none';
+            });
+            
+
+            editForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (currentCard) {
+                const link = currentCard.querySelector('a');
+                const img = currentCard.querySelector('img');
+                img.alt = editAppName.value + ' App';
+                img.src = editAppImg.value;
+                link.href = editAppLink.value;
+            }
+            editModal.style.display = 'none';
+            });
+
+            // Optional: Close modal when clicking outside the form
+            editModal.addEventListener('click', function(e) {
+            if (e.target === editModal) {
+                editModal.style.display = 'none';
+            }
+            });
+    </script>
+</body>
+</html>

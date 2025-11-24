@@ -1,0 +1,269 @@
+:root {
+            --primary: #131313;
+            --secondary: #131313;
+            --accent: #e50914;
+            --highlight: #fff;
+            --text: #e5e5e5;
+            --muted: #b3b3b3;
+            --border: #131313;
+        }
+        html, body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://wallpaperaccess.com/full/3378472.jpg') center/cover no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: var(--text);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: var(--secondary);
+            border-bottom: 2px solid var(--border);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 68px;
+            background-color: #000;
+            box-shadow:6px 6px 6px #000000b2;
+        }
+        .navbar .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff0202;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #000a;
+        }
+        .navbar nav ul {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .navbar nav ul li a:hover {
+            color: #ff2222;
+            background: #1a1a1a;
+        }
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar input[type="text"] {
+            padding: 7px 12px;
+            border-radius: 4px;
+            border: 1.5px solid #222;
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .navbar input[type="text"]:focus {
+            border-color: #ff2222;
+        }
+        .navbar button {
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 14px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .navbar button:hover {
+            background: #b0060f;
+        }
+        .app-navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #000000;
+            padding: 16px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .app-logo {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .app-nav {
+            display: flex;
+            gap: 24px;
+        }
+        .app-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .app-nav a.active, .app-nav a:hover {
+            background: #ff0000da;
+        }
+        .hero-banner {
+            margin: 0px 0px 0px 0px;
+            min-height: 150px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+            box-shadow:12px 12px 12px #000;
+        }
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 48px 64px 36px 64px;
+            max-width: 600px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-title {
+            color: var(--highlight);
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #000, 0 0px 2px var(--accent);
+            margin-bottom: 10px;
+        }
+        .hero-desc {
+            color: var(--muted);
+            font-size: 1.18rem;
+            margin-bottom: 18px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        main {
+            flex: 1 0 auto;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 0 32px 0;
+        }
+        .section-title {
+            color: var(--highlight);
+            font-size: 1.3rem;
+            margin: 36px 0 16px 0;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px #000;
+        }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 28px 18px;
+        }
+        .movie-card {
+            background: var(--secondary);
+            border-radius: 8px;
+            box-shadow: 0 4px 24px #000b;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .movie-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px #000c;
+        }
+        .movie-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background: var(--primary);
+        }
+        .movie-card-content {
+            padding: 14px 12px 10px 12px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .movie-card h3 {
+            color: var(--highlight);
+            margin: 0 0 6px 0;
+            font-size: 1.08rem;
+            font-weight: 600;
+            text-shadow: 0 1px 4px #000a;
+        }
+        .movie-card .meta {
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+        footer.movie-footer {
+            background: var(--secondary);
+            color: var(--muted);
+            border-top: 2px solid var(--border);
+            text-align: center;
+            padding: 24px 0 12px 0;
+            margin-top: 48px;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            box-shadow: 0 -2px 12px #000a;
+        }
+        @media (max-width: 900px) {
+            .navbar {
+                padding: 0 12px;
+            }
+            .hero-content {
+                padding: 32px 16px 32px 16px;
+            }
+            main {
+                padding: 0 8px 32px 8px;
+            }
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 8px;
+                height: auto;
+                padding: 8px 2px;
+            }
+            .hero-content {
+                padding: 18px 2px 18px 2px;
+            }
+            .hero-title {
+                font-size: 1.3rem;
+            }
+            .movie-card img {
+                height: 150px;
+            }
+        }
+        .movie-title {
+    text-align: center;
+    padding: 10px 0;
+}

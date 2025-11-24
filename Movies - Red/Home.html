@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <header>
+        <div class="navbar">
+            <div class="logo">MovieHub</div>
+            <nav>
+                <ul>
+                    <li style="order:1;"><a href="../Home.html">Home</a></li>
+                    <li style="order:2;"><a href="movie.html">Movies</a></li>
+                    <li style="order:3;"><a href="series.html">TV Shows</a></li>
+                    <li style="order:4;"><a href="anime.html">Anime</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search movies...">
+                <button onclick="searchMovies()">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-banner" style="background: url('https://img.freepik.com/free-vector/theater-cinema-curtains-with-focus-light-vector-illustration_1017-38346.jpg') center/cover no-repeat fixed; height: 100px; width: 100%;">
+</div>
+
+    <main style="z-index: 1; position: relative;">
+        <div class="section-title">Top Picks For You</div>
+        <div class="movie-grid" id="movieGrid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+            <div class="movie-card">
+                <img src="https://www.movieposters.com/cdn/shop/files/dune-part-two_pqvhqq31_480x.progressive.jpg?v=1708544977" alt="Dune: Part Two Poster">
+                <div class="movie-title">Dune: Part Two (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://www.movieposters.com/cdn/shop/files/godzillavkong_480x.progressive.jpg?v=1704381861" alt="Godzilla x Kong: The New Empire Poster">
+                <div class="movie-title">Godzilla x Kong: The New Empire (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://www.movieposters.com/cdn/shop/products/scan003_50eb1b71-ec96-463d-ba1b-0958ffa0b4a1_480x.progressive.jpg?v=1672337805" alt="Civil War Poster">
+                <div class="movie-title">Civil War (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://www.movieposters.com/cdn/shop/files/scan_125c3acc-726c-425f-9512-9f13289d81a6_480x.progressive.jpg?v=1719593307" alt="Furiosa: A Mad Max Saga Poster">
+                <div class="movie-title">Furiosa: A Mad Max Saga (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://www.movieposters.com/cdn/shop/files/kingdom-of-the-planet-of-the-apes_izhauws1_480x.progressive.jpg?v=1703090983" alt="Kingdom of the Planet of the Apes Poster">
+                <div class="movie-title">Kingdom of the Planet of the Apes (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://www.movieposters.com/cdn/shop/files/scan_35b6fe4a-0c3d-4d2d-9d22-ddb7a4ad576c_480x.progressive.jpg?v=1701373979" alt="The Fall Guy Poster">
+                <div class="movie-title">The Fall Guy (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://www.showbizjunkies.com/wp-content/uploads/2024/01/challengers-poster.jpg" alt="Challengers Poster">
+                <div class="movie-title">Challengers (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://th.bing.com/th/id/R.c6ab8cc09ffcd485084cccf2600c0554?rik=hi%2b6LImWYfl4Iw&riu=http%3a%2f%2fwww.impawards.com%2f2024%2fposters%2fif_ver5.jpg&ehk=KxhNPWgJ3A%2b6SOS2KeuQzOkSzsCHrdmY4pd7uBRxYwM%3d&risl=&pid=ImgRaw&r=0" alt="IF Poster">
+                <div class="movie-title">IF (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://th.bing.com/th/id/OIP.lF4sU8t1DdMcBBTFUelWBQAAAA?rs=1&pid=ImgDetMain" alt="The Garfield Movie Poster">
+                <div class="movie-title">The Garfield Movie (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://th.bing.com/th/id/OIP.vJMbq2SWbFbxy8pJberrEgHaK-?rs=1&pid=ImgDetMain" alt="Kung Fu Panda 4 Poster">
+                <div class="movie-title">Kung Fu Panda 4 (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://th.bing.com/th/id/OIP.twGg7bGQN5pZdKM_FDiK_AHaLH?rs=1&pid=ImgDetMain" alt="Inside Out 2 Poster">
+                <div class="movie-title">Inside Out 2 (2024)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/original/vbI5h1Enc3gscdmg7lRnG4jX4R7.jpg" alt="A Quiet Place: Day One Poster">
+                <div class="movie-title">A Quiet Place: Day One (2024)</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="movie-footer">
+        <p>🎬 FusionHub &copy; 2025 &mdash; Enjoy the shows!</p>
+    </footer>
+</body>
+</html>

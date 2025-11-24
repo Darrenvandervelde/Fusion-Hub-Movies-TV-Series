@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FusionHub Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background:rgb(10, 10, 10);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+        .main-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+        }
+        .poster-side {
+            width: 70%;
+            min-width: 300px;
+            height: auto;
+            background: url('https://img.freepik.com/free-vector/theater-cinema-curtains-with-focus-light-vector-illustration_1017-38346.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+            flex-direction: column;
+        }
+        .poster-side::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0; top: 0; bottom: 0; width: 100vw;
+            background: rgba(0,0,0,0.28);
+            pointer-events: none;
+        }
+        .right-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            min-width: 320px;
+            position: relative;
+            transition: opacity 0.5s, transform 0.7s cubic-bezier(.77,0,.18,1);
+        }
+        .login-container, .signup-container {
+            background: rgba(20, 20, 20, 0.92);
+            max-width: 350px;
+            margin: 75px 75px 75px 75px;
+            padding: 40px 32px 32px 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        .login-container {
+            margin: 0px;
+            position: absolute;
+            left: 120%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .signup-container {
+            margin: 0px;
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .move-right .signup-container {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .login-logo, .signup-logo {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #f80101;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px #000;
+        }
+        .login-title, .signup-title {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+        }
+        .login-form, .signup-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .login-form input, .signup-form input {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: #232323;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(255,152,0,0.08);
+        }
+        .login-form input:focus, .signup-form input:focus {
+            background: #2c2c2c;
+            box-shadow: 0 0 0 2px #831392;
+        }
+        .login-form button, .signup-form button {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: #ff0000;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(136, 1, 1, 0.548);
+        }
+        .login-form button:hover, .signup-form button:hover {
+            background: #790202;
+        }
+        .login-links, .signup-links {
+            margin-top: 18px;
+            text-align: center;
+        }
+        .login-links a, .signup-links a {
+            color: #ff0000;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 0.97rem;
+        }
+        .login-links a:hover, .signup-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            color: #ff0000;
+            padding: 24px 0 8px 0;
+            font-size: 1rem;
+            text-shadow: 0 1px 4px #000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        @media (max-width: 900px) {
+            .poster-side {
+                display: none;
+            }
+            .right-side {
+                align-items: center;
+                width: 100vw;
+            }
+            .login-container, .signup-container {
+                margin: 80px auto;
+                position: static;
+                transform: none;
+            }
+        }
+        .netflix-logo {
+            font-size: 10rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 2px 12px #000;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            margin-top: -60px;
+        }
+        /* Animation classes */
+        .move-right .poster-side {
+            transform: translateX(30vw);
+        }
+        .move-right .right-side {
+            transform: translateX(100vw);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .move-right .login-container {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .move-right .signup-container {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        /* Show login by default, hide signup */
+        .signup-container {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .login-container {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        /* When move-right, show signup, hide login */
+        .move-right .signup-container {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .move-right .login-container {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body> 
+    <div class="main-wrapper" id="mainWrapper">
+        <div class="poster-side">
+            <div class="netflix-logo">FusionHub</div>
+            <div class="login-container" id="loginContainer">
+                <div class="login-logo">FusionHub</div>
+                <div class="login-title">Sign in to your account</div>
+                <form class="login-form" autocomplete="off">
+                    <input type="text" placeholder="Username or Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" onclick="redirect()">Login</button>
+                </form>
+                <div class="login-links">
+                    <a href="#">Forgot password?</a> | 
+                    <a href="#" id="createAccountLink">Create account</a>
+                </div>
+            </div>
+            <div class="signup-container" id="signupContainer">
+                <div class="signup-logo">FusionHub</div>
+                <div class="signup-title">Create your account</div>
+                <form class="signup-form" autocomplete="off">
+                    <input type="text" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" onclick="redirect()">Sign Up</button>
+                </form>
+                <div class="signup-links">
+                    <a href="#" id="backToLoginLink">Back to login</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-side"></div>
+    </div>
+    <script>
+        document.getElementById('createAccountLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('mainWrapper').classList.add('move-right');
+        });
+
+        // redirect with out login's 
+        function redirect() {
+            window.location.href = 'Home.html';
+        }
+        document.getElementById('backToLoginLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('mainWrapper').classList.remove('move-right');
+        });
+    </script>
+</body>
+</html>
