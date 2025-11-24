@@ -1,6 +1,8 @@
 # Fusion Hub - Movies & TV Series
 
-![Fusion Hub Demo](FusionHubImg.png)
+![Fusion Hub Demo](ProjectImg1.png)
+![Fusion Hub Demo](ProjectImg2.png)
+![Fusion Hub Demo](ProjectImg3.png)
 
 ---
 
