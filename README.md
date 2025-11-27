@@ -12,10 +12,10 @@
 
 Key highlights:
 
-- 🎬 Browse movies and TV series with an attractive interface  
-- 📺 Organized sections for trending, popular, and recently added content  
-- 🌐 Responsive design that works on desktop and mobile  
-- ⚡ Lightweight and easy to customize  
+-  Browse movies and TV series with an attractive interface  
+-  Organized sections for trending, popular, and recently added content  
+-  Responsive design that works on desktop and mobile  
+-  Lightweight and easy to customize  
 
 ---
 
