@@ -1,5 +1,12 @@
 # Fusion Hub - Movies & TV Series
 
+Copyright (c) 2025 Fusion Hub
+
+All content, code, design, and visual elements of this project are the exclusive property of Fusion Hub.
+Any unauthorized copying, distribution, modification, or use of this project, in whole or in part, is strictly prohibited without prior written permission from the owner.
+
+
+
 ![Fusion Hub Demo](ProjectImg1.png)
 ![Fusion Hub Demo](ProjectImg2.png)
 ![Fusion Hub Demo](ProjectImg3.png)
@@ -45,10 +52,5 @@ Key highlights:
 - Add **filter by genre, rating, or release date**  
 
 ---
-
-Copyright (c) 2025 Fusion Hub
-
-All content, code, design, and visual elements of this project are the exclusive property of Fusion Hub.
-Any unauthorized copying, distribution, modification, or use of this project, in whole or in part, is strictly prohibited without prior written permission from the owner.
 
 
