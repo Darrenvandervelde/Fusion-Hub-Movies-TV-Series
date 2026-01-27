@@ -9,6 +9,10 @@ Any unauthorized copying, distribution, modification, or use of this project, in
 ![Fusion Hub Demo](ProjectImg2.png)
 ![Fusion Hub Demo](ProjectImg3.png)
 
+To view the live website deployment on Vercel:  
+[Click Here](https://basic-project-with-read-me.vercel.app)
+
+
 ---
 
 ## About This Project
@@ -20,8 +24,8 @@ Key highlights:
 -  Browse movies and TV series with an attractive interface  
 -  Organized sections for trending, popular, and recently added content  
 -  Responsive design that works on desktop and mobile  
--  Lightweight and easy to customize  
-
+-  Lightweight and easy to customize
+  
 ---
 
 ## Features
