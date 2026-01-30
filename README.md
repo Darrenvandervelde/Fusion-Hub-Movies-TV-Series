@@ -1,4 +1,4 @@
-# Fusion Hub - Movies & TV Series
+<h1>Fusion Hub - Movies & TV Series</h1>
 
 Copyright (c) 2025 Fusion Hub
 
