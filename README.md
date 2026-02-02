@@ -43,16 +43,14 @@ This project serves as a strong frontend foundation for a streaming-style platfo
 ```
 Fusion-Hub-Movies-TV-Series/
 │
-├── index.html          # Main landing page
-├── css/
-│   └── style.css       # Main stylesheet
-├── js/
-│   └── script.js       # JavaScript logic
-├── images/             # Images and assets
-├── ProjectImg1.png     # Preview image
-├── ProjectImg2.png     # Preview image
-├── ProjectImg3.png     # Preview image
-└── README.md           # Project documentation
+├── index.html
+├── style.css
+├── script.js      
+├──        
+├── ProjectImg1.png     
+├── ProjectImg2.png 
+├── ProjectImg3.png    
+└── README.md  
 ```
 
 ---
