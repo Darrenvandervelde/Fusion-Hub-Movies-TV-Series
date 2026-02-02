@@ -45,8 +45,7 @@ Fusion-Hub-Movies-TV-Series/
 │
 ├── index.html
 ├── style.css
-├── script.js      
-├──        
+├── script.js       
 ├── ProjectImg1.png     
 ├── ProjectImg2.png 
 ├── ProjectImg3.png    
