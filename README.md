@@ -4,7 +4,7 @@
 ![Fusion Hub Demo](ProjectImg2.png)
 ![Fusion Hub Demo](ProjectImg3.png)
 
-Please [Click here]FusionHub.pptx)
+Please [Click here](FusionHub.pptx)
 
 Please click here to [view live demo](https://fusion-hub-movies-tv-series.vercel.app)
 
