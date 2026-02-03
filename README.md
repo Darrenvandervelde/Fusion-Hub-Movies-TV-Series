@@ -4,6 +4,8 @@
 ![Fusion Hub Demo](ProjectImg2.png)
 ![Fusion Hub Demo](ProjectImg3.png)
 
+Please [Click here]FusionHub.pptx)
+
 Please click here to [view live demo](https://fusion-hub-movies-tv-series.vercel.app)
 
 ---
@@ -42,6 +44,10 @@ This project serves as a strong frontend foundation for a streaming-style platfo
 
 ```
 Fusion-Hub-Movies-TV-Series/
+│
+├──
+│
+│
 │
 ├── index.html
 ├── style.css
