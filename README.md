@@ -24,7 +24,10 @@ This project serves as a strong frontend foundation for a streaming-style platfo
 * [Project Structure](#project-structure)
 * [Technology](#technology)
 * [Installation](#installation)
+* [Backend / API (Planned)](#backend--api-planned)
+* [Deployment](#deployment)
 * [Future Improvements](#future-improvements)
+* [Challenges & Lessons Learned](#challenges--lessons-learned)
 * [License](#license)
 
 ---
@@ -62,10 +65,10 @@ Fusion-Hub-Movies-TV-Series/
 
 ## Technology
 
-* HTML5 – Semantic markup
-* CSS3 – Custom styling and animations
-* JavaScript – Dynamic content handling
-* Responsive design principles
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Live-Vercel-000000?style=flat&logo=vercel)
 
 ---
 
