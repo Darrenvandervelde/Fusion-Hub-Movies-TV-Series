@@ -1,11 +1,5 @@
 # Fusion Hub – Movies & TV Series
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Vercel](https://img.shields.io/badge/Live-Vercel-000000?style=flat&logo=vercel)
-
-
 ![Fusion Hub Demo](ProjectImg1.png)
 ![Fusion Hub Demo](ProjectImg2.png)
 ![Fusion Hub Demo](ProjectImg3.png)
@@ -21,6 +15,11 @@ Please click here to [view live demo](https://fusion-hub-movies-tv-series.vercel
 **Fusion Hub** is a modern movie and TV series browsing platform designed to showcase content in a clean, visually appealing interface inspired by popular streaming services. The project focuses on user experience, responsive design, and scalable structure for future feature expansion.
 
 This project serves as a strong frontend foundation for a streaming-style platform and is ideal for portfolio demonstration or further full‑stack development.
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Live-Vercel-000000?style=flat&logo=vercel)
 
 ---
 
