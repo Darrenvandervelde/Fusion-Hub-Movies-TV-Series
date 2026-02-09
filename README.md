@@ -84,6 +84,11 @@ Fusion-Hub-Movies-TV-Series/
    ```bash
    git clone https://github.com/Darrenvandervelde/Fusion-Hub-Movies-TV-Series.git
    ```
+
+   ```bash
+   npm start
+   ```
+   
 2. Open the project folder
 3. Run `index.html` in your browser
 
