@@ -53,8 +53,6 @@ This project serves as a strong frontend foundation for a streaming-style platfo
 ```
 Fusion-Hub-Movies-TV-Series/
 │
-├──
-│
 │
 │
 ├── index.html
@@ -62,14 +60,15 @@ Fusion-Hub-Movies-TV-Series/
 ├── script.js       
 ├── ProjectImg1.png     
 ├── ProjectImg2.png 
-├── ProjectImg3.png    
+├── ProjectImg3.png
+├── LICENSE.txt
 └── README.md  
 ```
 
 ---
 
 ## Technology
-
+-
 * HTML5 – Semantic markup
 * CSS3 – Custom styling and animations
 * JavaScript – Dynamic content handling
