@@ -98,16 +98,3 @@
 .login-links a:hover {
   text-decoration: underline;
 }
-
-.logo {
-  text-align: center;
-  color: #ff0000;
-  margin-bottom: 5px;
-}
-
-.subtitle {
-  text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
