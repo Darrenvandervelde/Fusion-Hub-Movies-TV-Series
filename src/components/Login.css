@@ -1,0 +1,99 @@
+/* Full screen dark background */
+.LoginContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Login Card */
+.LoginContainer form {
+  width: 350px;
+  padding: 40px 30px;
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Title */
+.LoginContainer form::before {
+  content: "FusionHub";
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff0000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.LoginContainer form::after {
+  content: "Sign in to your account";
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Labels */
+.LoginContainer label {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Inputs */
+.LoginContainer input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #232323;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+/* Input focus */
+.LoginContainer input:focus {
+  background: #2c2c2c;
+  box-shadow: 0 0 0 2px #ff0000;
+}
+
+/* Button */
+.LoginContainer button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ff0000;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Button hover */
+.LoginContainer button:hover {
+  background: #b30000;
+}
+
+/* Links section */
+.login-links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Links */
+.login-links a {
+  color: #ff0000;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}

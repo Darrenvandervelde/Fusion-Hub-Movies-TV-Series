@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">MovieHub</div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="movie.html">Movies</a></li>
+                    <li><a href="series.html">TV Shows</a></li>
+                    <li><a href="anime.html">Anime</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search movies...">
+                <button onclick="searchMovies()">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="section-title">TV Series List</div>
+        <div class="movie-grid" id="seriesGrid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_SY679_.jpg" alt="Breaking Bad Poster">
+                <div class="movie-title">Breaking Bad (2008–2013)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SY679_.jpg" alt="Game of Thrones Poster">
+                <div class="movie-title">Game of Thrones (2011–2019)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81nCqYQ1HGL._AC_SY679_.jpg" alt="Stranger Things Poster">
+                <div class="movie-title">Stranger Things (2016– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg" alt="The Mandalorian Poster">
+                <div class="movie-title">The Mandalorian (2019– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81A-mvlo+QL._AC_SY679_.jpg" alt="The Office Poster">
+                <div class="movie-title">The Office (US) (2005–2013)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81GqtNbs+PL._AC_SY679_.jpg" alt="Friends Poster">
+                <div class="movie-title">Friends (1994–2004)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81AJdOIEIhL._AC_SY679_.jpg" alt="Sherlock Poster">
+                <div class="movie-title">Sherlock (2010–2017)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81aA7hEEykL._AC_SY679_.jpg" alt="The Crown Poster">
+                <div class="movie-title">The Crown (2016– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/51oBxmV-dML._AC_SY679_.jpg" alt="The Witcher Poster">
+                <div class="movie-title">The Witcher (2019– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81Q1bR1t2-L._AC_SY679_.jpg" alt="Peaky Blinders Poster">
+                <div class="movie-title">Peaky Blinders (2013–2022)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81k8A5p1QSL._AC_SY679_.jpg" alt="Dark Poster">
+                <div class="movie-title">Dark (2017–2020)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81zLwAwD8-L._AC_SY679_.jpg" alt="Money Heist Poster">
+                <div class="movie-title">Money Heist (2017–2021)</div>
+            </div>
+            <!-- Row 3 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81tC5lA6k-L._AC_SY679_.jpg" alt="The Boys Poster">
+                <div class="movie-title">The Boys (2019– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/71VZbK4wQwL._AC_SY679_.jpg" alt="Better Call Saul Poster">
+                <div class="movie-title">Better Call Saul (2015–2022)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/51A2w+u2nGL._AC_SY679_.jpg" alt="Lost Poster">
+                <div class="movie-title">Lost (2004–2010)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81k8A5p1QSL._AC_SY679_.jpg" alt="House of Cards Poster">
+                <div class="movie-title">House of Cards (2013–2018)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81zLwAwD8-L._AC_SY679_.jpg" alt="Narcos Poster">
+                <div class="movie-title">Narcos (2015–2017)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81nCqYQ1HGL._AC_SY679_.jpg" alt="The Queen's Gambit Poster">
+                <div class="movie-title">The Queen's Gambit (2020)</div>
+            </div>
+            <!-- Row 4 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81tC5lA6k-L._AC_SY679_.jpg" alt="Chernobyl Poster">
+                <div class="movie-title">Chernobyl (2019)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81Q1bR1t2-L._AC_SY679_.jpg" alt="The Umbrella Academy Poster">
+                <div class="movie-title">The Umbrella Academy (2019– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg" alt="Westworld Poster">
+                <div class="movie-title">Westworld (2016– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/81aA7hEEykL._AC_SY679_.jpg" alt="Black Mirror Poster">
+                <div class="movie-title">Black Mirror (2011– )</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/51oBxmV-dML._AC_SY679_.jpg" alt="Vikings Poster">
+                <div class="movie-title">Vikings (2013–2020)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/I/51A2w+u2nGL._AC_SY679_.jpg" alt="House Poster">
+                <div class="movie-title">House (2004–2012)</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="movie-footer">
+        <p>🎬 FusionHub &copy; 2025 &mdash; Enjoy the shows!</p>
+    </footer>
+</body>
+</html>
