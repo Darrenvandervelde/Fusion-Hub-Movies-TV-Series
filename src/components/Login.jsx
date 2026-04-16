@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
 
-function LoginPage() {
 
 /* Username and Password */
 const [username,setUsername] = useState("");
@@ -21,6 +20,7 @@ if (!username || !password) {
     return;
 }
 
+function LoginPage() {}
     return( 
         <>
             <section id="LoginContainer" className="LoginContainer">
