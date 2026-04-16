@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">MovieHub</div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="movie.html">Movies</a></li>
+                    <li><a href="series.html">TV Shows</a></li>
+                    <li><a href="anime.html">Anime</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search anime...">
+                <button onclick="searchMovies()">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="section-title">Anime List</div>
+        <div class="movie-grid" id="movieGrid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+            <div class="movie-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/7/7b/Sword_Art_Online_light_novel_volume_1.png" alt="Sword Art Online Poster">
+                <div class="movie-title">Sword Art Online (2012)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Sword_Art_Online_II_Key_Visual.jpg" alt="Sword Art Online II Poster">
+                <div class="movie-title">Sword Art Online II (2014)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/6c/Sword_Art_Online_Alicization_Key_Visual.jpg" alt="Sword Art Online: Alicization Poster">
+                <div class="movie-title">Sword Art Online: Alicization (2018)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Sword_Art_Online_Alicization_War_of_Underworld_Key_Visual.jpg" alt="Sword Art Online: Alicization - War of Underworld Poster">
+                <div class="movie-title">Sword Art Online: Alicization - War of Underworld (2019)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Sword_Art_Online_Ordinal_Scale.png" alt="Sword Art Online: Ordinal Scale Poster">
+                <div class="movie-title">Sword Art Online: Ordinal Scale (2017 Movie)</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Sword_Art_Online_Alternative_Gun_Gale_Online_Key_Visual.jpg" alt="Sword Art Online Alternative: Gun Gale Online Poster">
+                <div class="movie-title">Sword Art Online Alternative: Gun Gale Online (2018)</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="movie-footer">
+        <p>🎬 FusionHub &copy; 2025 &mdash; Enjoy the shows!</p>
+    </footer>
+</body>
+</html>
