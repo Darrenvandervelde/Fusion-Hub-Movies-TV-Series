@@ -22,9 +22,6 @@ function LoginPage() {
   return (
     <section className="LoginContainer">
         <form onSubmit={handleSubmit}>
-            
-            <h2 className="logo">FusionHub</h2>
-            <p className="subtitle">Sign in to your account</p>
 
             <label htmlFor="username">Username</label>
             <input

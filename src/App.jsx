@@ -5,9 +5,11 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-      </Routes>
+      <div className="app-background">
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }
