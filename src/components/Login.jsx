@@ -1,57 +1,46 @@
 import { useState } from "react";
 import "./Login.css";
 
+function LoginPage() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-/* Username and Password */
-const [username,setUsername] = useState("");
-const [password, setPassword] = useState("");
-
-/* Submit button */
-const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Username:", username);
+    console.log("Password:", password);
+  };
 
-    console.log ("Username:", username);
-    console.log ("Password:", password);
-}
+  return (
+    <section className="LoginContainer">
+      <form onSubmit={handleSubmit}>
+        
+        {/* Username */}
+        <label htmlFor="username">Username</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
 
-/* Basic Validation */
-if (!username || !password) {
-    alert("Please fill out the fields")
-    return;
-}
+        {/* Password */}
+        <label htmlFor="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-function LoginPage() {}
-    return( 
-        <>
-            <section id="LoginContainer" className="LoginContainer">
-                <form onSubmit={handleSubmit}>
-
-                    {/* Username */}
-                    <label htmlFor="Username">Username</label>
-                    <input 
-                    id="Username"
-                    name="Username"
-                    type="Text" 
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)} // targets password usestate const {username}
-                    />
-
-                    {/* Password */}
-                    <label htmlFor="Password">Password</label>
-                    <input
-                    id="Password"
-                    type="Password" 
-                    placeholder="Password" 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)} // targets password usestate const {password}
-                    />
-
-                    <button type="submit">Login</button>
-                </form>
-            </section>
-        </>
-    )
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  );
 }
 
 export default LoginPage;
