@@ -13,16 +13,6 @@ function LoginPage() {
         alert("Please fill in all fields");
         return;
     }
-
-    if(username.length < 3) {
-        alert("Username needs to be at least 3 letters");
-        return;
-    }
-
-    if(password.length < 3) {
-        alert("Password needs to be at least 3 letters");
-        return;
-    }
     
     console.log("Username:", username);
     console.log("Password:", password);
@@ -31,32 +21,36 @@ function LoginPage() {
 
   return (
     <section className="LoginContainer">
-      <form onSubmit={handleSubmit}>
-        
-        {/* Username */}
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <form onSubmit={handleSubmit}>
+            
+            <h2 className="logo">FusionHub</h2>
+            <p className="subtitle">Sign in to your account</p>
 
-        {/* Password */}
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+            <label htmlFor="username">Username</label>
+            <input
+            id="username"
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            />
 
-        <button type="submit">Login</button>
-      </form>
+            <label htmlFor="password">Password</label>
+            <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <button type="submit">Login</button>
+
+            <div className="login-links">
+            <a href="#">Forgot password?</a>
+            </div>
+
+        </form>
     </section>
   );
 }
