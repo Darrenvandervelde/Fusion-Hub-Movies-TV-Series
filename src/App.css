@@ -5,10 +5,3 @@ body {
   background: url('./assets/Background.png') cover/center no-repeat;
   font-family: Arial, sans-serif;
 }
-.app-background {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: none;
-}
