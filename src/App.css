@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: url('./assets/Background.png') cover/center no-repeat;
   font-family: Arial, sans-serif;
 }
 .app-background {
