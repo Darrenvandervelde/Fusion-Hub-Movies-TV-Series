@@ -124,6 +124,7 @@
 }
 
 /* Subtitle */
+/* Subtitle */
 .LoginContainer form::after {
   content: "Sign in to your account";
   font-size: 0.9rem;
