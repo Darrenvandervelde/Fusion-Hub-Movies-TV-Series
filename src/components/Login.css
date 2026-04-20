@@ -1,10 +1,104 @@
 /* Full screen dark background */
+/* Container split layout */
 .LoginContainer {
   height: 100vh;
   display: flex;
+  font-family: Arial, sans-serif;
+}
+
+/* LEFT SIDE (LOGIN) */
+.loginForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  background: #f4f6f8;
+}
+
+.loginForm input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.loginForm button {
+  padding: 10px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE (CHAT) */
+.chatBox {
+  flex: 1;
+  position: relative;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* 🔵 BIG CIRCLE BACKGROUND */
+.chatBox::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #4a90e2;
+  border-radius: 50%;
+  top: -150px;
+  right: -150px;
+  z-index: 0;
+}
+
+/* Chat content above circle */
+.chatBox h3,
+.chatMessages,
+.chatInput {
+  position: relative;
+  z-index: 1;
+}
+
+/* Chat messages */
+.chatMessages {
+  width: 70%;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.bot {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Input */
+.chatInput {
+  display: flex;
+  width: 70%;
+}
+
+.chatInput input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+}
+
+.chatInput button {
+  padding: 10px 15px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 0 6px 6px 0;
 }
 
 /* Login Card */
