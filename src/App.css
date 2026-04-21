@@ -1,14 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
   font-family: Arial, sans-serif;
+  background-color: #f4f1ff;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(118, 75, 162, 0.28) 1px, transparent 0),
+    linear-gradient(135deg, #f7f4ff, #ece6ff);
+  background-size: 24px 24px, 100% 100%;
 }
+
 .app-background {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-color: transparent;
 }
