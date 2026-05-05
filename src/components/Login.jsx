@@ -6,6 +6,7 @@ function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const isEnable = true
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -14,9 +15,12 @@ function LoginPage() {
         return;
     }
     
-    console.log("Username:", username);
-    console.log("Password:", password);
-
+    if(!isEnable) {
+      console.log("Username:", username);
+      console.log("Password:", password);
+    } else {
+      console.log('Nothing')
+    }
   };
 
   return (
