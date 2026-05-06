@@ -5,7 +5,6 @@ function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const isEnable = false;
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -13,10 +12,14 @@ function LoginPage() {
       alert("Please fill in all fields");
       return;
     }
+
+    console.log("Username:", username);
+    console.log("Password:", password);
   };
 
   return (
     <section className="LoginContainer">
+      
       {/* LEFT SIDE - LOGIN */}
       <form onSubmit={handleSubmit} className="loginForm">
 
